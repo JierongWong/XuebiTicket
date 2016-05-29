@@ -149,6 +149,17 @@ public class HomeController {
 	public Object getJson(int uId, int cId, String session, String seats) {
 		return jsonService.createOrder(uId, cId, session, seats);
 	}
-
+    @RequestMapping(value = "movie/currentMovieList", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.GetMovieListModule.class)
+	public Object getCurrentMovieList() {
+		return jsonService.getCurrentMovieListByJson(5);
+	}
+	@RequestMapping(value = "movie/info", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.GetMovieInfoModule.class)
+	public Object getMovieInfo(@RequestParam("movieId") int id) {
+		return jsonService.getMovieInfo(id);
+	}
 	
 }
