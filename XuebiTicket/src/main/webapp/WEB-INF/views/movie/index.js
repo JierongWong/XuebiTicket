@@ -41,9 +41,9 @@ function genratePanelGroup(movies) {
   	$(group).on('click', function(event) {
   		
   		// for file://
-  		//window.location.href = window.location.href.replace("index.html", "detail.html#" + $(this).attr("movieId"));
+  		window.location.href = window.location.href.replace("index.html", "detail.html#" + $(this).attr("movieId"));
   		//for live-serve
-  		window.location.href = window.location.href + 'detail.html#' + $(this).attr("movieId");
+  		//window.location.href = window.location.href + 'detail.html#' + $(this).attr("movieId");
   	})
 
   	$('.panel-group').append(group);
