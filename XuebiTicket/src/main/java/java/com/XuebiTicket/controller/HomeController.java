@@ -20,12 +20,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.march.ticketjdbc.model.*;
-import com.march.ticketjdbc.service.*;
+import java.com.XuebiTicket.model.*;
+import java.com.XuebiTicket.service.*;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 @RequestMapping("/")
 public class HomeController {
@@ -35,9 +32,6 @@ public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -58,19 +52,42 @@ public class HomeController {
 	public Object getCurrentMovieList() {
 		return jsonService.getCurrentMovieListByJson(5);
 	}
-
 	@RequestMapping(value = "movie/info", method = RequestMethod.GET)
 	@ResponseBody
 	@JsonView(JsonModule.GetMovieInfoModule.class)
 	public Object getMovieInfo(@RequestParam("movieId") int id) {
 		return jsonService.getMovieInfo(id);
 	}
-
 	@RequestMapping(value = "movie/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	@JsonView(JsonModule.GetMovieInfoModule.class)
 	public Object getMovie(@RPathVariable("id") int id) {
 		return "movie";
+	}
+
+	@RequestMapping(value = "user/login", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.CreateOrderModule.class)
+	public Object getLogin(String username, String password) {
+		return jsonService.userLogin(username, password);
+	}
+	@RequestMapping(value = "user/sign_up", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.CreateOrderModule.class)
+	public Object getSignUp(String username, String password, String phone, String email) {
+		return jsonService.userSignUp(username, password, phone, email);
+	}
+	@RequestMapping(value = "user/modify", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.CreateOrderModule.class)
+	public Object getModify(String username, String password, String phone, String email) {
+		return jsonService.userModify(username, password, phone, email);
+	}
+	@RequestMapping(value = "user/info", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.CreateOrderModule.class)
+	public Object getInfo(String username, String phone, String email) {
+		return jsonService.userInfo(username, phone, email);
 	}
 
 
