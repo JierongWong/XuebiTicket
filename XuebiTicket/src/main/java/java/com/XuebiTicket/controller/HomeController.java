@@ -90,6 +90,12 @@ public class HomeController {
 		return jsonService.userInfo(username, phone, email);
 	}
 
+    @RequestMapping(value = "order/create", method = RequestMethod.GET)
+	@ResponseBody
+	@JsonView(JsonModule.CreateOrderModule.class)
+	public Object getJson(int uId, int cId, String session, String seats) {
+		return jsonService.createOrder(uId, cId, session, seats);
+	}
 
 	
 }
