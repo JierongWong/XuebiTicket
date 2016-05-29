@@ -57,7 +57,7 @@ function genrateTheaterGroup(theaters) {
       <p class="panel-title"></p>
     </div>
     <div class="panel-body">
-      <img src="./img/1.jpg" alt="">
+      <img src=" alt="">
       <div class="detail">
         <p class="address"></p>
         <p class="traffic"></p>
