@@ -7,8 +7,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.c09.cinpockema.user.entities.User;
-import com.c09.cinpockema.user.entities.repositories.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService {
