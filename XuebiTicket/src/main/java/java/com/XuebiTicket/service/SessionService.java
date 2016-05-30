@@ -11,8 +11,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import com.c09.cinpockema.user.entities.User;
-import com.c09.cinpockema.user.entities.repositories.UserRepository;
 
 @Service
 public class SessionService {
