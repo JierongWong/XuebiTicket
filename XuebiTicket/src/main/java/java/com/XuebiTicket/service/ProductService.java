@@ -5,13 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.c09.cinpockema.product.entities.Screening;
-import com.c09.cinpockema.product.entities.Ticket;
-import com.c09.cinpockema.product.entities.repositories.ScreeningRepository;
-import com.c09.cinpockema.product.entities.repositories.TicketRepository;
-import com.c09.cinpockema.cinema.entities.Hall;
-import com.c09.cinpockema.movie.entities.Movie;
-import com.c09.cinpockema.cinema.entities.Seat;
 
 @Service
 public class ProductService {
