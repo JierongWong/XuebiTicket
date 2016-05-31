@@ -1,0 +1,87 @@
+body{
+	background-color: #EEEEEE;
+}
+#movie_detailArea, #movie_theaterArea, #movie_theater_detailArea {
+	width: 1000px;
+	margin: 10px auto;
+	border: solid #E0E0E0 1px;
+	padding: 20px;
+}
+.detaiMoivepost{
+	width: 100%;
+	height: auto;
+}
+.light_word {
+	color: #999;
+}
+.normal_word{
+	color: #333;
+}
+.movieshowdate {
+	float: right;
+	font-size: 12px;
+}
+.movietitle {
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.moivescore {
+	font-size: 16px;
+	font-weight: normal;
+	color: orange;
+}
+.inshort_description{
+	background-color: #faffea;
+	color: #680;
+	font-family: "microsoft sans serif";
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.title {
+	font-weight: bold;
+}
+
+.theaters {
+	background-color: #f9f9f9;
+	border: 1px solid gainsboro;
+	padding: 10px;
+}
+
+.B_addresses_item,.theater {
+	padding: 3px;
+	margin-right: 20px;
+	color: rgb(0,136,204);
+}
+
+.B_addresses_item:hover ,.theater:hover {
+	padding: 3px;
+	margin-right: 20px;
+	color: white;	
+	background-color: rgb(0,136,204);
+}
+.playDate{
+	border: 1px solid rgb(0,136,204);
+	color: rgb(0,136,204);
+	padding: 4px 40px;
+	margin-right: 10px;
+}
+
+.B_addresses_item_clicked ,.theater_clicked,.Date_clicked {	
+	color: white;	
+	background-color: rgb(0,136,204);
+}
+
+.theater_name {
+	font-weight: bold;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+
+
