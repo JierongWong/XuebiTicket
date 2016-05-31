@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="order.css">
+  <script type="text/javascript" src="./lib/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="./lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./data.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">XuebiTicket</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+    </ul>
+    <div class="nav-action">
+     	<button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">登录</button>
+     	<button class="btn btn-primary" data-toggle="modal" data-target="#registeModal">注册</button>
+    </div>
+		
+		<!-- login model-->
+		<div class="modal fade" id="loginModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">
+							登录
+						</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="username" class="col-sm-2 control-label">username</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="username">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="password" class="col-sm-2 control=label">password</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control" id="password">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button id="login" class="btn btn-primary">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="registeModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">
+							注册
+						</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="username" class="col-sm-2 control-label">username</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="username">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="emial" class="col-sm-2 control=label">email</label>
+								<div class="col-sm-10">
+									<input type="email" class="form-control" id="password">
+								</div>
+							</div>
+						
+							<div class="form-group">
+								<label for="password" class="col-sm-2 control=label">password</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control" id="password">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button id="login" class="btn btn-primary">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+  </nav>
+  <div class="view-page">
+  	<div class="order">
+	  	<div class="panel panel-default thread">
+	    	<div class="panel-heading">
+	      	<p class="panel-title">订单</p>
+	    	</div>
+	    	<div class="panel-body">
+	      	<div class="detail">
+	      		<p class="name info">电影名称<span class="content">愤怒的小鸟</span></p>
+	        	<p class="playdate info">上映时间<span class="content">2016-05-21</span></p>
+	        	<p class="price info">影片单价<spane class="content" >￥50</spane></p>
+	      	</div>
+	      	<form class="form-horizontal">
+		      	<div class="form-group ">
+		      		<label for="theater" class="col-sm-2 control-label">影院选择</label>
+		      		<div class="col-sm-4">
+			      		<select class="form-control" id="theater">
+			      			<option value="">星美国际影城(松江店)</option>
+			      			<option value="">UME国际影城(宝山店)</option>
+			      			<option value="">海上明珠国际影城(联洋店)</option>
+			      			<option value="">海上国际影城(月星环球港店)座</option>
+			      		</select>
+			      	</div>
+		      	</div>
+		      	<div class="form-group seat">
+		      		<label for="seat" class="">
+		      			<span class="title">座位</span>
+								<input type="number" id="seat" >
+								<span>行</span>
+								<input type="number" id="seat" >
+								<span>列</span>
+							</label>
+		      	</div>
+		      </form>
+	    	</div>
+	    	<div class="panel-footer">
+	    		<button class="btn btn-success" data-toggle="modal" data-target="#loginModal">提交</button>
+     			<button class="btn btn-warning" data-toggle="modal" data-target="#registeModal">取消</button>
+	    	</div>
+	   </div>
+  </div>	
+</body>
+</html>
