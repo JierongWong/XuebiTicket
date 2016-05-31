@@ -8,3 +8,4 @@ User(uid,username,password,phone,email)
 Order(oid,uid,cid,date,price,state),uid、cid为外键
 Ticket(tid,oid,price)，oid为外键
 Cinema(cid,name,address)
+Session(sid,movieName,cid,time,price),cid为外键
