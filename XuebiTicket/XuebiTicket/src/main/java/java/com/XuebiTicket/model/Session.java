@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+public class Session {
 	@JsonView({JsonModule.GetSessionListModule.class, JsonModule.GetCinemaListModule.class})
 	private int session_id;
 	
