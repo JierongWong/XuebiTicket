@@ -110,19 +110,4 @@ public class HomeController {
 		return jsonService.getCinemaInfo(name);
 	}
 	
-	@RequestMapping(value = "session/sessionList", method = RequestMethod.GET)
-	@ResponseBody
-	@JsonView(JsonModule.CreateSessionListModule.class)
-	public Object getIndex(@RequestParam(value="cinemaId", defaultValue="1")int cinemaId,
-			@RequestParam(value="movieName", defaultValue="hello")String movieName) {
-		return jsonService.getSectionListByJson(movieName, cinemaId);
-	}
-
-	@ResponseBody
-	@RequestMapping(value = "session/{id}", method = RequestMethod.GET)
-	@JsonView(JsonModule.GetSessionInfoModule.class)
-	public Object  getDetail(@PathVariable("id") int id) {
-		return jsonService.getSectionInfoByJson(id);
-	}
-
 }
