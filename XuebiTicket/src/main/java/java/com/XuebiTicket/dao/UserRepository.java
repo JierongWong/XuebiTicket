@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.XuebiTicket.model.User;
 
 @Repository
-public class UserRepository() {
+public class UserRepository() extends Repository<User, long> {
 	public void save(User user);
 	public Iterable<User> findAll();
 	public User findOne(long id);
