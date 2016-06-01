@@ -22,7 +22,7 @@ public class Movie {
 	@JsonView(JsonModule.GetMovieInfoModule.class)
 	private String movie_director;
 	@JsonView(JsonModule.GetMovieInfoModule.class)
-	private List<String> movie_actors;
+	private String movie_actors;
 
 	private long start_time;
 	private long end_time;
@@ -69,10 +69,10 @@ public class Movie {
 	public void setMovieDirector(String director) {
 		this.movie_director = director;
 	}
-	public List<String> getMovieActors() {
+	public String getMovieActors() {
 		return movie_actors;
 	}
-	public void setMovieActors(List<String> actors) {
+	public void setMovieActors(String actors) {
 		this.movie_actors = actors;
 	}
 	public long getStartTime() {
