@@ -1,4 +1,4 @@
-package com.XuebiTicket.dao.UserRepository.java
+package com.XuebiTicket.dao.MovieCommentRepository.java
 
 import java.util.List;
 
@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 import com.XuebiTicket.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, long> {
-	User findByUserName(String username);
+public interface MovieCommentRepository() extends JpaRepository<MovieComment, long> {
+	List<MovieComment> findByMovieId(long id);
 }
